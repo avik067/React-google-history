@@ -1,0 +1,32 @@
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+.row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.img-container {
+  text-align: left;
+}
+p {
+  text-align: left;
+  font-size: 10px;
+
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+img {
+  max-height: 20px;
+}
+.span {
+  font-weight: 300;
+  color: #64748b;
+}
+button {
+  border: none;
+}
