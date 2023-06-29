@@ -58,7 +58,7 @@ class MainBack extends Component {
           <div>
             <img
               src="https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png"
-              alt=""
+              alt="app logo"
             />
           </div>
           <div className="row">
@@ -66,7 +66,7 @@ class MainBack extends Component {
               <img
                 src="https://assets.ccbp.in/frontend/react-js/search-img.png"
                 className="icon"
-                alt=""
+                alt="search"
               />
             </div>
             <div className="search-input-contaier">

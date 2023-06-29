@@ -19,18 +19,22 @@ input {
   outline: none;
   border: none;
   background-color: #2850a7;
-  min-height: 20%;
+  min-height: 100%;
   color: white;
+  min-height: 28px;
 }
 .search-icon-container {
+  padding: 3px 2px 1px 3px;
+  box-sizing: border-box;
   background-color: #2850a7;
-  height: 20px;
+  min-height: 25px;
+  align-slef: center;
+  border-right: 1px solid #ffffff;
 }
 .search-input-contaier {
-  height: 20px;
 }
 .icon {
-  height: 20px;
+  min-height: 20px;
 }
 .main {
   background-color: #ececec;

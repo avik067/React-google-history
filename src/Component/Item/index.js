@@ -8,18 +8,17 @@ const Item = props => {
 
   return (
     <li>
-      <div className="row">
+      <div className="row ">
         <p>{timeAccessed}</p>
 
         <div className="img-container">
-          <img src={logoUrl} alt="app logo" />
+          <img src={logoUrl} alt="domain logo" />
         </div>
-        <p className="para">
-          {title} <span className="span">{domainUrl}</span>
-        </p>
+        <p className="para ">{title}</p>
+        <p className="span">{domainUrl}</p>
       </div>
       <div>
-        <button type="button" id="delete" onClick={action}>
+        <button type="button" data-testid="delete" onClick={action}>
           <img
             src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
             alt="delete"
