@@ -32,3 +32,8 @@ input {
 .icon {
   height: 20px;
 }
+.main {
+  background-color: #ececec;
+  border-radius: 20px;
+  padding: 10px;
+}

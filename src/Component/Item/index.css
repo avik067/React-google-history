@@ -30,3 +30,13 @@ img {
 button {
   border: none;
 }
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.p {
+  font-weight: 700;
+}

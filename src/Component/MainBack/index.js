@@ -1,9 +1,9 @@
 import {Component} from 'react'
-import Card from '../Card'
+import Item from '../Item'
 import './index.css'
 
 class MainBack extends Component {
-  state = {keyword: ''}
+  state = {keyword: '', stateList: this.props}
 
   searchMatch = event => {
     const w = event.target.value
@@ -11,14 +11,46 @@ class MainBack extends Component {
     this.setState({keyword: w.toLowerCase()})
   }
 
+  triggerD = triggerId => {
+    console.log(triggerId)
+    const {stateList} = this.state
+    console.log(stateList)
+    const {primaryList} = stateList
+    const afterD = primaryList.filter(item => item.id !== triggerId)
+    const ob = {primaryList: afterD}
+    this.setState({stateList: ob})
+  }
+
   render() {
-    const {primaryList} = this.props
+    const {stateList} = this.state
+
+    const {primaryList} = stateList
     const searchList = primaryList.filter(item => {
       let {title} = item
       title = title.toLowerCase()
       const {keyword} = this.state
       return title.includes(keyword)
     })
+    let divRender
+    if (searchList.length !== 0) {
+      console.log('y')
+      divRender = (
+        <div className="main">
+          <ul>
+            {searchList.map(item => (
+              <Item item={item} key={item.id} onclick={this.triggerD} />
+            ))}
+          </ul>
+        </div>
+      )
+    } else {
+      console.log('h')
+      divRender = (
+        <div className="row">
+          <p className="p">There is no history to show</p>
+        </div>
+      )
+    }
 
     return (
       <div>
@@ -42,9 +74,7 @@ class MainBack extends Component {
             </div>
           </div>
         </div>
-        <div className="bar2">
-          <Card listOf={searchList} />
-        </div>
+        <div className="bar2">{divRender}</div>
       </div>
     )
   }
